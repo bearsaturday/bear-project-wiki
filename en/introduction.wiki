@@ -40,52 +40,45 @@ In BEAR, resource woks as data source, service layer, or domain model.This is ba
 
 More than component itself or how to behave as model, The link and framework of application and more focused. These are connected with "REST", That's basic architecture of "BEAR".
 
-= ページ設計 =
+= Page Oriented Design =
 
-webサイトを「URLを単なるコントローラやモデル呼び出し用の引数とする一つの大きなwebアプリケーション」として考えるより、「1URLがそれぞれ独立したページリソースを表現するリソースの集合体」のように考え*ページ設計*を主体とします。フロントコントローラーではなくページコントローラーです。
+BEAR use page controller (not front controller) Each URI　has "page" which handle each URI resource and independent.
 
-リソースであるページは、多くの場合他のリソースを読み出し合成してビューにPUSHします。リソースのレイヤリングです。たとえば「ユーザーページリソース」は「ユーザーリソース」と共に「ユーザーの友達リソース」「ユーザーのプロファイルリソース」などのリソースにreadリクエストを行い得られた「ページリソース」の結果をテンプレートと合成してHTMLで表現します。
+"Main" request "Page", then "Page" request "Resource". The page may the collection of resource.
 
-*1URL* につき *1ページクラス* を用意し、ページクラスにページの*イベントハンドラ* を記述します。メインクラスはそのページのハンドラーをイベントに応じて呼び出しオブジェクトをページを動作させます。ページが最終的に返すhttpリソースが最終的に出力されHTMLとして表現されます。
+The page is the collection of event handler.
+More than think web site as application, 
 
-|| *イベント* || *ページメソッド* || 
-|| 注入 || onInject() || 
-|| 初期化 || onInit(array $args) || 
-|| 表示 || onOutput() ||
-|| サブミットOK || onAction(array $submit) ||
-|| アクティブリンククリック ||  onClick($id) ||
-|| 例外 ||  onExecption(Exception $e) ||
 
-ページではonAction, onClick()などページイベント発火したときにコールされる処理を記述します。
-BEARではonで始まるイベントハンドラメソッドを記述することがプログラムの中心になります。
+|| *Event* || *Method* || 
+|| Inject || onInject() || 
+|| Init || onInit(array $args) || 
+|| output || onOutput() ||
+|| Submit OK || onAction(array $submit) ||
+|| Active link click ||  onClick($id) ||
+|| Execption ||  onExecption(Exception $e) ||
+
 
 = DI（依存性の注入）=
-
-オブジェクトの生成、設定、依存の注入を専用で行うDIツールを用いることで、オブジェクトの生成や依存する利用オブジェクトの関係やインスタンス管理を柔軟にコントロールでき、テストや変更がより容易になります。
-
-BEARの多くのフレームワークコンポーネントがフレームワークソースを触る事なしに自作のコンポーネントと差し替え可能です。またオブジェクトの遅延生成やインジェクトキャッシュも可能です。これはすべてクラスが統一されたインターフェイス（コンストラクタと設定、インジェクト）を持ち、DIツールが全てのサービスオブジェクトをグローバルレジストリでシングルトン管理するサービスロケーターにより実現されています。
+= DI (Dependency Injection)
+A construction of object with setting and get dependencies are performed in so called "DI tool". Which enable test and configration easier. Most of component in BEAR can be replaceable.BEAR class has same constructor and configuration property and injection method.The "Registry" in DI tool handle instance call, "Singleton" service is default.It worked as service locater.
 
 =スペック=
-
-
-==基本仕様==
-
+==SPEC ==
+    * first release 2008 summer
     * PHP5.2+
-    * 基本ライブラリはPEAR 
-    * フルスタックでなくプラガブル
-    * ViewはデフォルトでSmarty
-    * UAスニッフィング（携帯/モバイル端末他/複数ブラウザ対応）
-    * エンコードは携帯含めて全てUTF-8
-    * 二重投稿、CSRF対策などのセキュリティ機構
-    * ログ、キャッシュ(File/APC/Memcache)、イメージ(GD/iMagick/Cairo)
-    * エラーハンドラ、デバックツール
-    * オンラインエディター
-    * コマンドラインインターフェイス
-    * オートローダー標準
-    * PEAR/Zendスタイルコーディング
-    * ソケットサービス
+    * PEAR component / PEAR coding style
+    * Smarty
+    * pluggable, not full stack
+    * Multi user agent (UA sniffing, PC/Mobile/etc...)
+    * UTF-8
+    * double post check, CSRF
+    * logging, cache(File/APC/Memcache), Iimage(GD/iMagick/Cairo)
+    * error handler, debugging tool
+    * online editor
+    * PSR-0 auto loder
 
 
 = More about BEAR =
 
-コンセプト、より専門的な設計指針、影響を受けたフレームワーク、ライブラリやその他情報ソースについては[software_design ソフトウェアデザイン]をご覧ください。
+See more at [software_design ソフトウェアデザイン].
