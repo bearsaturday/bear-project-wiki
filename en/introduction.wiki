@@ -19,13 +19,9 @@ This is simple example to have HTML.
 
 = A Resource Oriented Design =
 
-一般に、MVCフレームワークがモデルをオブジェクトとして扱うのに対してBEARではリソースとして扱います。
 In BEAR, model is used as "resource"
 
 "resource model" has no particular own method like "object model", Instead of method. The resource has unified request interface.(REST)
-
-
-HTMLページとはリソースをHTML化したものと考えてみましょう。例えば、ブログの記事のページとは*ブログ記事リソース* を視覚化のためHTML表現にしたものとリソース中心に考えます。１つのページは単数または複数のリソースを持ちます。記事ページには記事リソースの他にコメントリソースや、トラックバックリソースもあるでしょう。それらのリソースは互いにリンクされています。それぞれのリソースは表現のために各々がビューテンプレートを持つ事ができますが、リンクされた状態のリソースにもテンプレートを適用する事ができます。リンクはカプセル化され利用はリンク先をたどるだけです、aタグでhrefの中身を知る事なしにリンクをクリックするようなものです。
 
 Let's assume HTML page as representation of resource. for instance, the blog entry page is as visualized resource of "blog page resource". One page contains single or multiple resource. "entry resource" will have a "comment resource" or "trackback resource" Each resource is liked each other and have a view template for representation.
 
@@ -42,9 +38,7 @@ Some framework deal with model as data source, or some say model should be "doma
 
 In BEAR, resource woks as data source, service layer, or domain model.This is based on the idea model define is designed by application, not by framework. for instance, "today's notification" is enough as data source. but "train service management" is not enough with active record, I think.
 
-More than component itself or how to behave as model, The link 
- 
-モデルのあり方よりもむしろモデルと他のコンポーネントとの結合に着目し、RESTを使って接続するのがBEARの基本アーキテクチャです。
+More than component itself or how to behave as model, The link and framework of application and more focused. These are connected with "REST", That's basic architecture of "BEAR".
 
 = ページ設計 =
 
