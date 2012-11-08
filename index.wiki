@@ -1,0 +1,74 @@
+#summary Manual
+#labels Manual
+==BEARマニュアル==
+=== インストールと設定 ===
+
+  * [Install インストール]
+  * [setup_osx PHP環境構築]
+  * [http://pear.bear-project.net/ PEARチャネル][http://code.google.com/hosting/images/tearoff_icon.gif]
+
+=== はじめに ===
+  * [introduction BEARについて]
+  * [HelloWorld HelloWorldチュートリアル]
+  * [blog Blogチュートリアル]
+  * [convention コード規約]
+
+=== リファンレンス ===
+
+  * [application アプリケーション]
+  * [page ページ]
+  * 　[onInject インジェクト]
+  * 　[onInit 初期化]
+  * 　[onOutput アウトプット]
+  * 　[onAction フォームアクション]
+  * 　[click クリック]
+  * 　[Page_Sample  ページサンプル]
+  * [resource リソース]
+  * 　[ro リソースオブジェクト]
+  * 　[page_resource ページリソース]
+  * 　[set_options セットオプション]
+  * 　[AOP アスペクト指向]
+  * 　[annotation アノテーション]
+  * 　[link リンク]
+  * 　[resource_template  テンプレート]
+  * 　[resource_scheme スキーム]
+  * 　[Resource_Sample  リソースサンプル]
+  * 　[resource_error  リソースエラー]
+  * [form フォーム]
+  * 　[Form_Sample フォームサンプル]
+  * [Mobile モバイル対応]
+  * [db データベース]
+  * [cache キャッシュ]
+  * [image イメージ]
+  * [session セッション]
+  * [error エラー]
+  * [server サーバー]
+  * [orbited コメット]
+  * [autoloader オートローダー]
+  * [web_service Webサービス]
+  * [dependency DIツール]
+  * [agent UAスニッフィング]
+  * [CLI CLI/バッチ]
+  * [debug 開発]
+  * [ci_and_test CIとユニットテスト]
+  * [package パッケージ]
+  * [const 定数]
+  * [ajax AJAX]
+=== 注意 ===
+  * [migration マイグレーションガイド]
+  * [caution_session セッションの注意]
+
+=== APIドキュメント ===
+  * [http://api.bear-project.net/ BEAR doc][http://api.bear-project.net/ http://code.google.com/hosting/images/tearoff_icon.gif]
+
+=== 絵文字コード ===
+  * [http://beardemo.bear-project.net/test/emoji/static.php 絵文字リファレンス]
+
+=== デモ===
+  * [http://code.google.com/p/bear-demo/wiki/top?tm=6 BEAR demo][http://www.bear-project.net/demo/ http://code.google.com/hosting/images/tearoff_icon.gif]
+
+=== Who's using BEAR ? ===
+ * [Whos_Using_BEAR  BEARアプリケーション]
+
+=== About US ===
+ * [contact コンタクト]

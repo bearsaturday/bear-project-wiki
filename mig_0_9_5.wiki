@@ -1,0 +1,9 @@
+#summary BEAR 0.9.05での変更点
+
+= BEAR 0.9.05 =
+
+ * BEAR_Form#renderFormsの$enableJsのbug fix(View AdapterがRENDERER_SMARTY_ARRAYのときにjavascriptが削除されなくなりました）
+ * vendors/PEARを2011/11/15版にupgrade
+ * typo修正
+
+以上です。
