@@ -58,7 +58,7 @@ include 'BEAR/Dev/Profile/script/start.php';
 ==== XH GUI によるプロファイリング機能を使うには ====
 xhprof のブランチでプロファイルの履歴が利用可能なXH GUIも利用可能です。
 
-BEARアプリケーションの[App.php]で、[App::init]内に、以下のようにスクリプトを呼ぶことで、xhprof機能が有効化されます。（前述のxhprof を有効にしていた場合は、start.phpにstartxh.phpに置換することで、XH GUI が有効化されるように変更されます。）
+BEARアプリケーションの[App.php]で、[App::init]内に、以下のようにスクリプトを呼ぶことで、XH GUI機能が有効化されます。（前述のxhprof を有効にしていた場合は、start.phpにstartxh.phpに置換することで、有効化されるように変更されます。）
 
 {{{
 include 'BEAR/Dev/Profile/script/startxh.php';
