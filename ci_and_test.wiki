@@ -40,16 +40,26 @@ $ sudo pear install phpunit/PHPUnit_Selenium
  [http://www.bear-project.net/blog/2011/05/php%E3%82%82%E3%82%84%E3%82%89%E3%81%AA%E3%81%8D%E3%82%83jenkins/ PHPもやらなきゃJenkins]
 
 === プロファイラ ===
-実行時間の分析や[http://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%BC%E3%83%AB%E3%82%B0%E3%83%A9%E3%83%95 コールグラフ]の出力に必要です。
+実行時間の分析や[http://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%BC%E3%83%AB%E3%82%B0%E3%83%A9%E3%83%95 コールグラフ]の出力を行うには、下記の設定が必要です。
+
+==== xhprof によるプロファイリング機能を使うには ====
+xhprofはFacebookの開発したWebで利用可能なプロファイラです。
+PHPエクステンション「Xdebug」をインストールします。
+
  * [http://xdebug.org/ Xdebug]
  * [http://pecl.php.net/package/xhprof XHPROF]
  * [http://www.graphviz.org/ Graphviz]
 
-プロファイラを利用するにはApp.phpのApp::initの前で以下のようにスクリプトを呼びます。
+BEARアプリケーションの[App.php]で、[App::init]内に、以下のようにスクリプトを呼ぶことで、xhprof機能が有効化されます。
 {{{
 include 'BEAR/Dev/Profile/script/start.php'; 
 }}}
-xhprofはFacebookの開発したwebで利用可能なプロファイラです。そのブランチでプロファイルの履歴が利用可能なXH GUIも利用可能です。start.phpに変えてstartxh.phpを以下のようにincludeします。
+
+==== XH GUI によるプロファイリング機能を使うには ====
+xhprof のブランチでプロファイルの履歴が利用可能なXH GUIも利用可能です。
+
+BEARアプリケーションの[App.php]で、[App::init]内に、以下のようにスクリプトを呼ぶことで、xhprof機能が有効化されます。（前述のxhprof を有効にしていた場合は、start.phpにstartxh.phpに置換することで、XH GUI が有効化されるように変更されます。）
+
 {{{
 include 'BEAR/Dev/Profile/script/startxh.php';
 }}}
