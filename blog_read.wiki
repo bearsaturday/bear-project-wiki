@@ -15,7 +15,7 @@ Note:
 
 App/Ro/Post.php
 {{{
-class App_Ro_Posts extends App_Ro
+class App_Ro_Post extends App_Ro
 {
     protected $_table = 'posts';
 
