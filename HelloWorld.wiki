@@ -41,6 +41,7 @@ htdocs/hello.php
  }
 
 App_Main::run('Page_Hello');
+?>
 }}}
 
 テンプレートファイル
