@@ -110,7 +110,7 @@ hello world
 コマンドラインではフォーマットの指定ができます。
 
 {{{
-bear read Posts -f table
+bear read Post -f table
 }}}
 
 {{{
