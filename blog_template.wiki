@@ -6,7 +6,7 @@ blogチュートリアル(4) テンプレートの作成
 前のステップでページにPostリソース状態がセットされました。今度はリソースの表現のためのテンプレートを作成します。
 
 == リソース用テンプレート ==
-App/elements/post.tpl
+App/views/elements/post.tpl
 {{{
 <table>
     <tr>
@@ -32,7 +32,7 @@ App/elements/post.tpl
 リソーステンプレートはリソースに関わらず{$code}, {$header}, {$body}の３つがアサインされます。
 
 == ページ用テンプレート ==
-App/views/page/index.php
+App/views/page/index.tpl
 {{{
 <h1>Blog posts</h1>
 {$post}
@@ -56,7 +56,7 @@ Note:
 
 スタティックな文字列のセットにも使用します。下記の例ではtitleを指定しています。テンプレート側では{$layout.title}と指定します。
 
-App/views/page/index.tpl
+App/views/pages/index.yml
 {{{
 default:
   title: BEAR Blog
