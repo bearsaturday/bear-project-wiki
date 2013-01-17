@@ -21,7 +21,7 @@ App/views/elements/post.tpl
         <td><a href="item.php/?id={$post.id}">{$post.title}</a></td>
         <td>{$post.created|date_format:"%Y/%m/%d %H:%M"}</td>
     </tr>
-    {else}
+    {foreachelse}
     <tr>
         <td colspan="3">No posts found</td>
     </tr>
