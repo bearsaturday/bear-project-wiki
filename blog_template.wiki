@@ -91,7 +91,7 @@ class Page_Index extends App_Page
         $params = array(
             'uri' => 'Post',
             'values' => $args,
-            'options' => array('template' => 'post')
+            'options' => array('template' => 'item')
         );
         $this->_resource->read($params)->set('post');
     }
