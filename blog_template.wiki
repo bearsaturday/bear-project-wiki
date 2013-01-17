@@ -117,7 +117,7 @@ App/views/pages/item.tpl
 {$post}
 <a href="/index.php">一覧に戻る</a>
 }}}
-App/views/pages/item.tpl
+App/views/pages/item.yml
 {{{
 layout:default.tpl
 }}}
