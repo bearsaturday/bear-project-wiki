@@ -43,6 +43,8 @@ require_once 'App.php';
 
 class Page_Update extends App_Page
 {
+    private $_id;
+
     public function onInject()
     {
         $this->_resource = BEAR::dependency('BEAR_Resource');
@@ -52,6 +54,7 @@ class Page_Update extends App_Page
 
     public function onInit(array $args)
     {
+        $this->_id = $args['id'];
         $params = array(
                     'uri' => 'Post',
                     'values' => array('id' => $args['id'])
@@ -67,7 +70,7 @@ class Page_Update extends App_Page
 
     public function onAction(array $submit)
     {
-        $submit['id'] = $this->_args['id'];
+        $submit['id'] = $this->_id;
         $params = array(
             'uri' => 'Post',
             'values' => $submit
