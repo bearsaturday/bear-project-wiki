@@ -98,6 +98,17 @@ App/views/pages/create.ymp
 layout:default.tpl
 }}}
 
+Post.phpに下記のコードを追加します
+App/Ro/Post.php
+{{{
+    public function onCreate($values)
+    {
+        $result = $this->_query->insert($values);
+    }
+}}}
+
+
+
 == ブラウザで確認 ==
 
 コードの入力が完了したら、ブラウザで/create.php にアクセスしてみてください。新規追加用のフォームが表示されたら、何かデータを入力して「Save Post」ボタンをクリックし、データが正しく追加されるかどうか確認して下さい。
