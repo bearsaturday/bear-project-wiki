@@ -92,7 +92,7 @@ body
 次にこのリソースインターフェイスをページから利用できるようにしましょう。
 
 == ページからdeleteリクエスト ==
-
+delete.php
 {{{
 <?php
 
@@ -127,4 +127,5 @@ class Page_Delete extends App_Page
 }
 
 App_Main::run('Page_Delete');
+?>
 }}}
