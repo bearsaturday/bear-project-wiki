@@ -43,6 +43,7 @@ class Page_Create extends App_Page
 }
 
 App_Main::run('Page_Create');
+?>
 }}}
 
 このページでは閲覧ページには無かったonActionというメソッドが加わりました。このメソッドはフォームのバリデーションが取った時だけ呼ばれます。※このときonOutput()は呼ばれません。
@@ -79,6 +80,7 @@ class App_Form_Post extends BEAR_BAse
         $form->addElement('submit', '_submit', 'Save Post', '');    
     }
 }
+?>
 }}}
 
 このページのビューテンプレートを設置します。
@@ -98,7 +100,7 @@ layout:default.tpl
 
 == ブラウザで確認 ==
 
-コードの入力が完了したら、ブラウザで/add.php にアクセスしてみてください。新規追加用のフォームが表示されたら、何かデータを入力して「Save Post」ボタンをクリックし、データが正しく追加されるかどうか確認して下さい。
+コードの入力が完了したら、ブラウザで/create.php にアクセスしてみてください。新規追加用のフォームが表示されたら、何かデータを入力して「Save Post」ボタンをクリックし、データが正しく追加されるかどうか確認して下さい。
 
 == 関連項目 ==
 
